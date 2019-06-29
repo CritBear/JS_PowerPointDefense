@@ -200,4 +200,61 @@ var mouse = {
 	},
 };
 
-var map = {},
+var map = {
+	
+	start: {
+		pos: new Vector2( 100, 50 ),
+		width: 40,
+		height: 20,
+	},
+	end: {
+		pos: new Vector2( 1000, 650 ),
+		width: 40,
+		height: 20,
+	},
+	road: [
+		new Road( new Vector2( 75, 0 ), 50, 300 ),
+		new Road( new Vector2( 75, 300 ), 300, 50 ),
+		new Road( new Vector2( 375, 300 ), 50, 200 ),
+		new Road( new Vector2( 175, 500 ), 250, 50 ),
+		new Road( new Vector2( 175, 550 ), 50, 100 ),
+		new Road( new Vector2( 175, 650 ), 500, 500 ),
+		new Road( new Vector2( 675, 150 ), 50, 550 ),
+		new Road( new Vector2( 725, 150 ), 250, 50 ),
+		new Road( new Vector2( 975, 150 ), 50, 550 ),
+	],
+	turningPoint: [
+		new TurningPoint( new Vector2( 75, 350 ), new Vector2( 1, 0 ) ),
+		new TurningPoint( new Vector2( 425, 300 ), new Vector2( 0, 1 ) ),
+		new TurningPoint( new Vector2( 425, 550 ), new Vector2( -1, 0 ) ),
+		new TurningPoint( new Vector2( 175, 500 ), new Vector2( 0, 1 ) ),
+		new TurningPoint( new Vector2( 175, 700 ), new Vector2( 1, 0 ) ),
+		new TurningPoint( new Vector2( 725, 700 ), new Vector2( 0, -1 ) ),
+		new TurningPoint( new Vector2( 675, 150 ), new Vector2( 1, 0 ) ),
+		new TurningPoint( new Vector2( 1025, 150 ), new Vector2( 0, 1 ) ),
+	],
+	
+	update: function() {
+		
+		this.render();
+	},
+	
+	render: function() {
+		
+		ctx.save();
+		
+		ctx.fillStyle = "#aaa";
+		for( var i = 0; i < this.road.length; i++ ) {
+			var road = this.road[i];
+			ctx.fillRect( road.pos.x, road.pos.y, road.width, road.height );
+		}
+		
+		ctx.fillStyle = "green";
+		ctx.fillRect( this.start.pos.x - this.start.width/2, this.start.pos.y - this.start.height/2, this.start.width, this.start.height );
+		
+		ctx.fillStyle = "red";
+		ctx.fillRect( this.end.pos.x - this.end.width/2, this.end.pos.y - this.end.height/2, this.end.width, this.end.height );
+		
+		ctx.restore();
+	},
+};
