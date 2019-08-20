@@ -1,4 +1,4 @@
-
+﻿
 function getUIByName( name ) {
 	
 	if( name ) {
@@ -125,7 +125,7 @@ function makeButton( name ) {
 			options.type = type;
 			return this;
 		},
-		setImage: functionn( image ) {
+		setImage: function( image ) {
 			options.image = image;
 			return this;
 		},

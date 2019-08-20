@@ -1,4 +1,4 @@
-
+﻿
 function init() {
 	
 	canvas = document.createElement( "canvas" );
@@ -206,11 +206,11 @@ function setUI() {
 	objectList.UI.push( towerControlPanel );
 	
 	var btn_upgradeA = makeButton( "btn_upgradeA" ).setType( "UpgradeButton" ).setSize( 80, 80 ).setPos( new Vector2( canvas.width - 190, canvas.height - 220 ) ).build();
-	btn_upgradeA.parentUI = towerControlPanel'
+	btn_upgradeA.parentUI = towerControlPanel;
 	btn_upgradeA.num = 0;
 	
 	var btn_upgradeB = makeButton( "btn_upgradeB" ).setType( "UpgradeButton" ).setSize( 80, 80 ).setPos( new Vector2( canvas.width - 95, canvas.height - 220 ) ).build();
-	btn_upgradeB.parentUI = towerControlPanel'
+	btn_upgradeB.parentUI = towerControlPanel;
 	btn_upgradeB.num = 0;
 	
 	towerControlPanel.addContent( btn_upgradeA ).addContent( btn_upgradeB );

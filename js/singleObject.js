@@ -169,7 +169,7 @@ var mouse = {
 				ctx.save();
 				ctx.globalAlpha = 0.7;
 				ctx.beginPath();
-				ctx.arc( this.pos.x, this.pos.y this.locatingTower.radius, 0, Math.PI*2 );
+				ctx.arc( this.pos.x, this.pos.y, this.locatingTower.radius, 0, Math.PI*2 );
 				ctx.fillStyle = "red";
 				ctx.fill();
 				ctx.restore();

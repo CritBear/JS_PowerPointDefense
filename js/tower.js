@@ -6,7 +6,7 @@ function Tower( options ) {
 	this.pos = options.pos;
 	this.damage = towerInfo[options.name].damage;
 	this.range = towerInfo[options.name].range;
-	this.rate = towerInfo[options.name]..rate;
+	this.rate = towerInfo[options.name].rate;
 	this.cost = towerInfo[options.name].cost;
 	this.radius = towerInfo[options.name].radius;
 	this.imagesthis.bullet = towerInfo[options.name].bullet;
@@ -257,7 +257,7 @@ var RailGunTower = (function() {
 		
 		makeBullet( this.bullet ).setPos( this.pos.add( firePosOffset ) ).setTargetId( this.targetId ).setDamage( this.damage ).build();
 		makeEffect( "fire_01" ).setSizeShift( -1 ).setTransparentShift( -1 ).setPos( this.pos.add( firePosOffset ) ).setAngle( this.angle ).build();
-		this.fireCool = this.rate;% 2;
+		this.fireCool = this.rate;
 	};
 	
 	return RailGunTower;
