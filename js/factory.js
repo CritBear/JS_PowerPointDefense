@@ -44,7 +44,7 @@ function makeTower( name ) {
 
 	return {
 
-		sestPos: function( v ) {
+		setPos: function( v ) {
 
 			if(v instanceof Vector2) {
 				options.pos = v;
@@ -99,7 +99,7 @@ function Road( pos, w, h ) {
 	this.height = h;
 }
 
-function TuringPoint( pos, direction ) {
+function TurningPoint( pos, direction ) {
 
 	this.pos = pos;
 	this.direction = direction;
@@ -115,7 +115,7 @@ function makeEnemy( name ) {
 	options.id = name + gameManager.enemyCount;
 	options.name = name;
 	options.pos = new Vector2(map.start.pos.x, map.start.pos.y);
-	options.pos.add(offest);
+	options.pos.add(offset);
 	options.offset = offset;
 
 	return {

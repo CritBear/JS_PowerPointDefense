@@ -41,7 +41,7 @@ function update() {
 	
 	ctx.clearRect( 0, 0, canvas.width, canvas.height );
 	
-	map.render();
+	map.update();
 	
 	for( var key in objectList ) {
 		var list = objectList[key];
@@ -96,7 +96,7 @@ function mouseClick( e ) {
 		var ui = objectList.UI[i];
 		if( ui.onClick && ui.able ) {
 			if( mouse.pos.x > ui.pos.x && mouse.pos.x < ui.pos.x + ui.width && mouse.pos.y > ui.pos.y && mouse.pos.y < ui.pos.y + ui.height ) {
-				ui.onCilck();
+				ui.onClick();
 				return;
 			}
 		}

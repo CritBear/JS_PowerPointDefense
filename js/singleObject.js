@@ -110,7 +110,7 @@ var gameManager = {
 
 var mouse = {
 	
-	pos: new Vector2(),
+	pos: new Vector2( 100, 50 ),
 	isLocating: false,
 	locatingTower: {},
 	locatable: true,

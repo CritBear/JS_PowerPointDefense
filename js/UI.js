@@ -75,7 +75,7 @@ var Panel = (function () {
 		
 		this.contents.forEach(function( content ) {
 			if(content.onClick) {
-				if(colllisionPointRect(mouse, content)) {
+				if(collisionPointRect(mouse, content)) {
 					//클릭된후 실행할 것들
 					//밑에꺼랑 둘중에 하나 잘되는 걸로
 				}
@@ -131,10 +131,10 @@ function makeButton( name ) {
 		},
 		build: function() {
 			switch( options.type ) {
-				case "ShopTowerButton":
+				case "shopTowerButton":
 					return new ShopTowerButton( options );
 					break;
-				case "UpgradeButton":
+				case "upgradeButton":
 					return new UpgradeButton( options );
 					break;
 				default:

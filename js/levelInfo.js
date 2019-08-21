@@ -1,4 +1,4 @@
-function Road(num, health, speed, rate, reward, stageReward) {
+function Round(num, health, speed, rate, reward, stageReward) {
 
 	this.num = num;
 	this.health = health;
@@ -8,7 +8,7 @@ function Road(num, health, speed, rate, reward, stageReward) {
 	this.stageReward = stageReward;
 }
 
-var roundInfo = {
+var roundInfo = [
 	new Round(10, 30, 3, 10, 10, 100),
 	new Round(10, 40, 3, 10, 10, 100),
 	new Round(10, 50, 3, 10, 10, 100),
@@ -26,7 +26,7 @@ var roundInfo = {
 	new Round(15, 500, 5, 10, 10, 100),
 	new Round(15, 600, 5, 10, 10, 100),
 	new Round(15, 700, 5, 10, 10, 100),
-};
+];
 
 var towerInfo = {
 
@@ -123,7 +123,7 @@ var towerInfo = {
 		image: new Image(),
 		bullet: "",
 	},
-	spearower: {
+	spearTower: {
 		damage: 1,
 		range: 300,
 		rate: 100,
@@ -203,6 +203,12 @@ var effectInfo = {
 	},
 
 	fire_01: {
+		width: 70,
+		height: 30,
+		duration: 20,
+		image: new Image(),
+	},
+	fire_02: {
 		width: 70,
 		height: 30,
 		duration: 20,

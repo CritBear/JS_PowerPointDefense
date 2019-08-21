@@ -9,7 +9,8 @@ function Tower( options ) {
 	this.rate = towerInfo[options.name].rate;
 	this.cost = towerInfo[options.name].cost;
 	this.radius = towerInfo[options.name].radius;
-	this.imagesthis.bullet = towerInfo[options.name].bullet;
+	this.image = towerInfo[options.name].image;
+	this.bullet = towerInfo[options.name].bullet;
 	
 	this.targetId = undefined;
 	this.fireCool = 0;
