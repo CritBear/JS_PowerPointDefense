@@ -104,6 +104,12 @@ var BasicEnemy = (function () {
 					this.debuff[i] = null;
 				}
 			}
+			for(var i = 0; i < this.debuff.length; i++) {
+				if(this.debuff[i] === null) {
+					this.debuff.splice(i, 1);
+					i = -1;
+				}
+			}
 		}
 
 		if( isFrozen ) {

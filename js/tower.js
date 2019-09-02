@@ -40,6 +40,14 @@ Tower.prototype.sell = function() {
 	getUIByName( "shopPanel" ).able = true;
 	this.remove();
 };
+Tower.prototype.remove = function() {
+
+	for(var i = 0; i < objectList.tower.length; i++) {
+		if(objectList.tower[i] === this) {
+			objectList.tower.splice(i, 1);
+		}
+	}
+};
 Tower.prototype.onClick = function() {
 	
 	getUIByName( "shopPanel" ).able = false;
@@ -68,7 +76,7 @@ var BasicTower = (function() {
 	BasicTower.prototype.constructor = BasicTower;
 	
 	BasicTower.prototype.update = function() {
-		
+
 		if( getEnemyById( this.targetId ) ) {
 			var target = getEnemyById( this.targetId );
 			if( this.pos.distance( target.pos ) <= this.range ) {
@@ -84,7 +92,7 @@ var BasicTower = (function() {
 				if( !objectList.enemy[i] ) {
 					continue;
 				}
-				if( this.pos.distance( objectList.enemy[i].pos ) <= this.rnage ) {
+				if( this.pos.distance( objectList.enemy[i].pos ) <= this.range ) {
 					this.targetId = objectList.enemy[i].id;
 					break;
 				}
@@ -97,7 +105,7 @@ var BasicTower = (function() {
 		this.render();
 	};
 	BasicTower.prototype.fire = function() {
-		
+
 		var firePosOffset = new Vector2( 45, 0 ).rotate( this.angle );
 		
 		makeBullet( this.bullet ).setPos( this.pos.add( firePosOffset ) ).setTargetId( this.targetId ).setDamage( this.damage ).build();
@@ -137,7 +145,7 @@ var FastTower = (function() {
 				if( !objectList.enemy[i] ) {
 					continue;
 				}
-				if( this.pos.distance( objectList.enemy[i].pos ) <= this.rnage ) {
+				if( this.pos.distance( objectList.enemy[i].pos ) <= this.range ) {
 					this.targetId = objectList.enemy[i].id;
 					break;
 				}
@@ -189,7 +197,7 @@ var CannonTower = (function() {
 				if( !objectList.enemy[i] ) {
 					continue;
 				}
-				if( this.pos.distance( objectList.enemy[i].pos ) <= this.rnage ) {
+				if( this.pos.distance( objectList.enemy[i].pos ) <= this.range ) {
 					this.targetId = objectList.enemy[i].id;
 					break;
 				}
@@ -240,7 +248,7 @@ var RailGunTower = (function() {
 				if( !objectList.enemy[i] ) {
 					continue;
 				}
-				if( this.pos.distance( objectList.enemy[i].pos ) <= this.rnage ) {
+				if( this.pos.distance( objectList.enemy[i].pos ) <= this.range ) {
 					this.targetId = objectList.enemy[i].id;
 					break;
 				}
@@ -441,7 +449,7 @@ var SpearTower = (function() {
 				if( !objectList.enemy[i] ) {
 					continue;
 				}
-				if( this.pos.distance( objectList.enemy[i].pos ) <= this.rnage ) {
+				if( this.pos.distance( objectList.enemy[i].pos ) <= this.range ) {
 					this.targetId = objectList.enemy[i].id;
 					break;
 				}

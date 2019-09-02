@@ -122,6 +122,7 @@ function setUI() {
 	
 	var btn_nextRound = makeButton( "btn_nextRound" ).setImage( gameManager.images.nextRound ).setSize( 70, 70 ).setPos( new Vector2( canvas.width - 270, 0 ) ).build();
 	btn_nextRound.onClick = function() {
+		console.log(objectList);
 		gameManager.nextRound();
 	};
 	objectList.UI.push( btn_nextRound );
@@ -205,13 +206,13 @@ function setUI() {
 	};
 	objectList.UI.push( towerControlPanel );
 	
-	var btn_upgradeA = makeButton( "btn_upgradeA" ).setType( "UpgradeButton" ).setSize( 80, 80 ).setPos( new Vector2( canvas.width - 190, canvas.height - 220 ) ).build();
+	var btn_upgradeA = makeButton( "btn_upgradeA" ).setType( "upgradeButton" ).setSize( 80, 80 ).setPos( new Vector2( canvas.width - 190, canvas.height - 220 ) ).build();
 	btn_upgradeA.parentUI = towerControlPanel;
 	btn_upgradeA.num = 0;
 	
-	var btn_upgradeB = makeButton( "btn_upgradeB" ).setType( "UpgradeButton" ).setSize( 80, 80 ).setPos( new Vector2( canvas.width - 95, canvas.height - 220 ) ).build();
+	var btn_upgradeB = makeButton( "btn_upgradeB" ).setType( "upgradeButton" ).setSize( 80, 80 ).setPos( new Vector2( canvas.width - 95, canvas.height - 220 ) ).build();
 	btn_upgradeB.parentUI = towerControlPanel;
-	btn_upgradeB.num = 0;
+	btn_upgradeB.num = 1;
 	
 	towerControlPanel.addContent( btn_upgradeA ).addContent( btn_upgradeB );
 	

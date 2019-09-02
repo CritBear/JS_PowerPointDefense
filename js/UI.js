@@ -2,7 +2,7 @@
 function getUIByName( name ) {
 	
 	if( name ) {
-		for(var i = 0; i < objectList.UI.lengh; i++) {
+		for(var i = 0; i < objectList.UI.length; i++) {
 			if(objectList.UI[i].name === name) {
 				return objectList.UI[i];
 			}

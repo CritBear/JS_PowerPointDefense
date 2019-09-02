@@ -1,7 +1,7 @@
 function getTowerById( id ) {
 
 	if( id ) {
-		for(var i = 0; i < objectList.tower.legnth; i++) {
+		for(var i = 0; i < objectList.tower.length; i++) {
 			if(objectList.tower[i] && objectList.tower[i].id === id) {
 				return objectList.tower[i];
 			}
@@ -13,7 +13,7 @@ function getTowerById( id ) {
 function getEnemyById( id ) {
 
 	if( id ) {
-		for(var i = 0; i < objectList.enemy.legnth; i++) {
+		for(var i = 0; i < objectList.enemy.length; i++) {
 			if(objectList.enemy[i] && objectList.enemy[i].id === id) {
 				return objectList.enemy[i];
 			}
@@ -25,7 +25,7 @@ function getEnemyById( id ) {
 function getBulletById( id ) {
 
 	if( id ) {
-		for(var i = 0; i < objectList.bullet.legnth; i++) {
+		for(var i = 0; i < objectList.bullet.length; i++) {
 			if(objectList.bullet[i] && objectList.bullet[i].id === id) {
 				return objectList.bullet[i];
 			}
@@ -60,7 +60,7 @@ function makeTower( name ) {
 					tower = new BasicTower(options);
 					break;
 				case "fastTower":
-					tower = new FastcTower(options);
+					tower = new FastTower(options);
 					break;
 				case "iceTower":
 					tower = new IceTower(options);
@@ -81,7 +81,7 @@ function makeTower( name ) {
 					tower = new IcicleTower(options);
 					break;
 				case "railGunTower":
-					tower = new railGunTower(options);
+					tower = new RailGunTower(options);
 					break;
 				default:
 					throw new Error("Wrong tower name!");
@@ -312,7 +312,7 @@ var Effect = (function() {
 
 		ctx.translate(this.pos.x, this.pos.y);
 		ctx.rotate(this.angle);
-		ctx.translate(-this.pos.x, -this,pos.y);
+		ctx.translate(-this.pos.x, -this.pos.y);
 
 		ctx.globalAlpha = this.transparency;
 		ctx.drawImage(this.image, this.pos.x - this.cWidth/2, this.pos.y - this.cHeight/2, this.cWidth, this.cHeight);
@@ -320,7 +320,7 @@ var Effect = (function() {
 
 		ctx.translate(this.pos.x, this.pos.y);
 		ctx.rotate(-this.angle);
-		ctx.translate(-this.pos.x, -this,pos.y);
+		ctx.translate(-this.pos.x, -this.pos.y);
 	};
 
 	return Effect;
