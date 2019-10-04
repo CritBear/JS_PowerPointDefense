@@ -204,7 +204,8 @@ var IcicleBullet = (function() {
 					}
 				}
 				
-				makeEffect("hit_02").setDuration(10).setSizeShift(0).setTransparentShift(-1).setSize(200, 200).setPos(this.pos).setAngle(Math.random()*Math.PI*2).build();
+				makeEffect("hit_02").setDuration(100).setSizeShift(0).setTransparentShift(-1).setSize(200, 200).setPos(this.pos).setAngle(Math.random()*Math.PI*2).build();
+				this.remove();
 			}
 		} else {
 			this.move();
