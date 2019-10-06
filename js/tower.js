@@ -265,7 +265,7 @@ var RailGunTower = (function() {
 		var firePosOffset = new Vector2(45, 0).rotate(this.angle);
 		
 		makeBullet( this.bullet ).setPos( this.pos.add( firePosOffset ) ).setTargetId( this.targetId ).setDamage( this.damage ).build();
-		makeEffect( "fire_01" ).setSizeShift( -1 ).setTransparentShift( -1 ).setPos( this.pos.add( firePosOffset ) ).setAngle( this.angle ).build();
+		makeEffect( "fire_02" ).setDuration(100).setSizeShift(-1).setTransparentShift( -1 ).setPos( this.pos.add( firePosOffset ) ).setAngle( Math.random()*Math.PI*2 ).build();
 		this.fireCool = this.rate;
 	};
 	

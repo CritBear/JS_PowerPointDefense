@@ -291,6 +291,7 @@ var Effect = (function() {
 			this.cWidth = this.width * (1 - this.transparency);
 			this.cHeight = this.height * (1 - this.transparency);
 		}
+		//투명도가 0일때 사이즈가 바뀌지 않는 버그 수정 필요
 
 		this.render();
 
