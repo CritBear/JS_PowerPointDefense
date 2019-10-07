@@ -203,8 +203,8 @@ var effectInfo = {
 	},
 
 	fire_01: {
-		width: 70,
-		height: 30,
+		width: 50,
+		height: 10,
 		duration: 20,
 		image: new Image(),
 	},
@@ -215,8 +215,8 @@ var effectInfo = {
 		image: new Image(),
 	},
 	hit_01: {
-		width: 100,
-		height: 100,
+		width: 250,
+		height: 250,
 		duration: 10,
 		image: new Image(),
 	},
