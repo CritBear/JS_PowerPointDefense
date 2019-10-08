@@ -52,8 +52,8 @@ var towerInfo = {
 	},
 
 	basicBullet: {
-		width: 70,
-		height: 3,
+		width: 100,
+		height: 30,
 		radius: 3,
 		speed: 30,
 		image: new Image(),
